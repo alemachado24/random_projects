@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    char word[100];
+    int length;
+    int countLetters;
+    int num_letters;
+    cout << "Enter a sentence: " << endl;
+    cin.getline(word, 100);
+    length = strlen(word);
+    int n = 1;
+    int space = 0;
+    for (int i = 0; i < length; i++)
+
+    {
+        if (word[i] == ' ')
+        {
+            n++;
+        }
+        else
+        {
+            n = n;
+        }
+    }
+    countLetters = strlen(word);
+
+    for (int i = 0; word[i] != '\0'; i++)
+
+    {
+        if (word[i] == ' ')
+        {
+            space++;
+        }
+    }
+    num_letters = countLetters - space;
+    cout << "Number of words = " << n <<endl;
+    //cout << "Number of letters= " << countLetters - space <<endl;
+    cout << "The average number of letters per word is = " << num_letters / n <<endl;
+   // cout << "Number of space = " << space << endl;
+
+    return 0;
+}
+/*
+Enter a sentence:
+Four score and seven years ago
+Number of words = 6
+The average number of letters per word is = 4
+
+C:\Users\wally\OneDrive\Desktop\chapter10\x64\Debug\chapter10.exe (process 2972) exited with code 0.
+Press any key to close this window . . .
+*/
